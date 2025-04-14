@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite App</title>
+</head>
+
+<body>
+	<h1> Prueba Tecnica </h1>
+	<form id="entradas" method="post">
+		<fieldset>
+			<legend>Ingresos de la Sopa de Letra</legend>
+			<div class="pos">
+				<label for="palabras">Palabras a buscar:</label>
+				<br>
+				<textarea name="palabras" id="palabras" rows="18" cols="30"></textarea>
+				<p>Nota: las palabras deben tener como minimo un largo de 3 letras y un maximo de 14 letras</p>
+			</div>
+			<div class="pos">
+				<label for="matriz">Sopa de Letras:</label>
+				<br>
+				<textarea name="matriz" id="matriz" rows="16" cols="42"></textarea>
+				<p>Nota: separar por comas cada columna y por salto de linea cada fila</p>
+			</div>
+		</fieldset>
+		<div class="group-buttons">
+			<button type="button" disabled>Mostrar</button>
+			<button type="submit" disabled>Validar</button>
+			<button type="reset">Limpiar</button>
+		</div>
+
+	</form>
+	<div id="app"></div>
+	<script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
