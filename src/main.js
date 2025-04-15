@@ -54,7 +54,7 @@ form.addEventListener('change', (event)=>{
         isValid = columnas_validadas.every((v)=>v.validacion) && palabras_validadas.every((v)=>v.validacion)
     }
     if (isValid){
-        btn_verificar.toggleAttribute('disabled')
+        btn_verificar.removeAttribute('disabled')
     }
 })
 
@@ -62,7 +62,9 @@ btn_verificar.addEventListener('click', (event)=>{
     event.preventDefault()
     app.setAttribute('class', 'border-app')
     app.innerHTML = crear_lista(palabras_buscadas) + crear_tabla(sopa_letras)
-    btn_enviar.toggleAttribute('disabled')
+    if(btn_enviar.hasAttribute('disabled')){
+        btn_enviar.removeAttribute('disabled')
+    }
 })
 
 function crear_tabla(matriz){
